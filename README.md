@@ -27,17 +27,25 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - To add angular material we can use ```ng add @angular/material```   , Reference : https://material.angular.io/guide/getting-started
 - To use Angular material, we have to include import statement in `app.module.ts` file and add them to imports array. And add them as 
  ```MatToolbarModule = <mat-toolbar> </mat-toolbar> ``` just like in angular js directive.
-  For eg : ```import {  MatToolbarModule} from '@angular/material/toolbar';```
+ - For eg : 
+  ```import {  MatToolbarModule} from '@angular/material/toolbar';```
   .....
   ```@NgModule({
-  declarations: [
-    ... components
+      declarations: [
+         ... components
   ],
   imports: [
-    ....
-    MatToolbarModule
+     ....
+     MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })```
+
+### Images
+- Images are stored in assets folder
+
+### Services
+- In angular services are for business logic, not directly related to view just like in Java
+- To create a service : ```ng g s servicename``` eg : ```ng g s weather```
 

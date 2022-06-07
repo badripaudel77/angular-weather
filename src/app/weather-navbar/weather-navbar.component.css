@@ -1,0 +1,8 @@
+.weather_navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar_items span {
+    margin: 1rem;
+}

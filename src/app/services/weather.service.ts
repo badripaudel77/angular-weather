@@ -7,10 +7,11 @@ import { Injectable } from '@angular/core';
 export class WeatherService {
 
   constructor(http:HttpClient) { 
-  
+    
   }
 
   getWeatherDataFromAPI(place :string) {
   
   }
+
 }

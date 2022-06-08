@@ -1,0 +1,28 @@
+.container {}
+
+.navbar {}
+
+.weather_body {
+    height: 500px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top : 50px;
+    box-shadow: 5px 5px 1px 1px;
+    border-radius: 10px;
+}
+
+.weather_body img {
+    width: 100%;
+    height: 50%;
+}
+
+.weather_content {
+ height: 50%;
+ background-color: rebeccapurple;
+ width: 100%;
+ text-align: center;
+}

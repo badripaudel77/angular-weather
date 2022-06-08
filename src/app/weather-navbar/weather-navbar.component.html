@@ -1,10 +1,14 @@
 <mat-toolbar color="primary" class="weather_navbar">
-    <div class="navbar_brand">
+    <a class="navbar_brand" [routerLink] = "['']">
       <span>{{navTitle}}</span>
-    </div>
+    </a>
     <div class="navbar_items">
-       <span>Search for a place</span>
-       <span>About App</span>
+      <a>
+        <span>Search for a place</span>
+      </a>
+      <a [routerLink]="['about']" [queryParams]="{version: '1.0.0'}">
+         <span>About App</span>
+      </a>
     </div>
 </mat-toolbar>
   

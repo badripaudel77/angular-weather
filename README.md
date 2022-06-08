@@ -48,4 +48,17 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ### Services
 - In angular services are for business logic, not directly related to view just like in Java
 - To create a service : ```ng g s servicename``` eg : ```ng g s weather```
+- Services have to be imported and placed in the providers array in the app.module.ts
+
+### Adding Routing
+- Router module can be added as : 
+``` RouterModule.forRoot([
+      {path: '', component : AppComponent},
+      {path: '/about', component : AppComponent} // TODO : TO BE REPLACED BY About Component later
+    
+    ])```
+- Instead of plain href link, we use ```routerLink``` given by angular as :
+- ```<a [routerLink]="['about']" [queryParams]="{version: '1.0.0'}">
+         <span>About App</span>
+      </a>```
 

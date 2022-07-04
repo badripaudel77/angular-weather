@@ -10,7 +10,6 @@ export class WeatherNavbarComponent implements OnInit {
    }
 
   ngOnInit(): void {
-     console.log('hello from ngOnInit()')
   }
   navTitle:string = 'Angular Weather'
 }

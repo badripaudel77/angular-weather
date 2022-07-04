@@ -3,11 +3,29 @@
       <!-- toolbar -->
       <app-weather-navbar></app-weather-navbar>
     </div>
+    <!-- include form for weather search -->
+    <!-- home components = parent , input component child -->
+    <!-- REF : https://angular.io/guide/inputs-outputs  -->
+    <div><app-input (formSubmitEvent)="callWeatherApi($event)"></app-input></div>
     <div class="weather_body">
       <img src="../assets/angular_weather_body.png" alt="Weather Img" />
       <div class="weather_content">
-         <span style="color: white;">Information about Weather at {{title}}</span> <hr>
-         <span>....</span>
+        <span style="color: white;" *ngIf="loading">Loading Data ...</span> <hr>
+        <span style="color: white;" *ngIf="!loading && weatherData">Weather info at {{title}} searched for location {{weatherData.name}}</span> <hr> <br><br><br>
+         <div class="upper-row">
+           <span>Min Temp: {{weatherData?.main?.temp_min}}C</span> &nbsp;
+           <span>Max Temp: {{weatherData?.main?.temp_max}}C</span> &nbsp;
+         </div>
+         <br><br>
+         <div class="middle-row">
+           <span>Feels like : {{weatherData?.main?.feels_like}}C</span> &nbsp;
+           <span>Humidity : {{weatherData?.main?.humidity}}</span> &nbsp;
+         </div>
+         <br><br>
+         <div class="lower-row">
+          <span>Country latitude : {{weatherData?.coord?.lat}}</span> &nbsp;
+          <span>Country longitude : {{weatherData?.coord?.lon}}</span> &nbsp;
+        </div>
       </div>
     </div>
 </div>

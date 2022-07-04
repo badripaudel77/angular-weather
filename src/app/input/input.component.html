@@ -1,0 +1,5 @@
+<div class="weather_search_input">
+    <form #form="ngForm" (submit)="submitForm()">
+      <input placeholder={{searchPlaceholder}}  name="place" [(ngModel)]="place"/>
+    </form> 
+  </div>

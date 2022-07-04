@@ -2,10 +2,7 @@
     <a class="navbar_brand" [routerLink] = "['']">
       <span>{{navTitle}}</span>
     </a>
-    <div class="navbar_items">
-      <a>
-        <span>Search for a place</span>
-      </a>
+    <div class="navbar_items"> 
       <a [routerLink]="['about']" [queryParams]="{version: '1.0.0'}">
          <span>About App</span>
       </a>

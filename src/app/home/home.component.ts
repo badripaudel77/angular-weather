@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { WeatherData } from '../models/weatherData.module';
+import { WeatherService } from '../services/weather.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  weatherData?:WeatherData;
 
-  ngOnInit(): void {
-  }
-  title = 'Angular Weather'
+  title:string = 'Amigos Angular Weather';
+  loading:boolean = false;
+  defaultLocation :string = 'Kathmandu, Nepal';
+  
+  constructor(private weatherService: WeatherService) { }
+
+    ngOnInit(): void {   
+      this.callWeatherApi(this.defaultLocation);
+     }
+
+    callWeatherApi(searchPlace: string) {
+      this.loading = true; 
+      this.weatherService.getWeatherDataFromAPI(searchPlace? searchPlace : this.defaultLocation)
+      .subscribe({
+        next: (response) => {
+          this.loading = false;
+          this.weatherData = (response);
+          //console.log("Response => ", this.weatherData);
+        }
+      });
+     }
 }

@@ -9,6 +9,7 @@ export class AboutComponent implements OnInit {
 
   constructor() { }
 
+  developerName:string = 'Badri Paudel'
   ngOnInit(): void {
   }
 

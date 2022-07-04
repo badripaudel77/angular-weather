@@ -26,3 +26,16 @@
  width: 100%;
  text-align: center;
 }
+
+.upper-row ,.middle-row{
+    color: antiquewhite;
+    display: flex;
+    justify-content: space-around;
+}
+
+.lower-row {
+    color: antiquewhite;
+    display: flex;
+    justify-content: space-around;
+    position : bottom;
+}

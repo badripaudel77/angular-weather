@@ -13,6 +13,8 @@ import { WeatherService } from './services/weather.service';
 import { RouterModule } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
+import { InputComponent } from './input/input.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -20,7 +22,8 @@ import { HomeComponent } from './home/home.component';
     AppComponent,
     WeatherNavbarComponent,
     AboutComponent,
-    HomeComponent
+    HomeComponent,
+    InputComponent
   ],
   imports: [
     BrowserModule,
@@ -28,6 +31,7 @@ import { HomeComponent } from './home/home.component';
     BrowserAnimationsModule,
     MatToolbarModule,
     HttpClientModule,
+    FormsModule,
     RouterModule.forRoot([
       {path: '', component : HomeComponent, pathMatch: 'full'},
       {path: 'about', component : AboutComponent, pathMatch: 'full'}

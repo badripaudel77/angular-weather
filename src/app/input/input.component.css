@@ -1,0 +1,10 @@
+.weather_search_input input {
+    padding: 15px;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    min-width: 220px;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 7px;
+}

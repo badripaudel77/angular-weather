@@ -62,3 +62,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
          <span>About App</span>
       </a>```
 
+- To pass data from child to parent we use @Output decorator. 
+  REF : ```https://angular.io/guide/inputs-outputs```
+
